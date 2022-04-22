@@ -10,17 +10,17 @@ public class LocationShould
     {
         var l1 = new Location(1, 0, CardinalPoint.North);
         var l2 = new Location(1, 0, CardinalPoint.North);
-        Assert.AreEqual(l1,l2);
+        Assert.AreEqual(l1, l2);
     }
-    
+
     [TestMethod]
     public void ShouldNotBeEqual()
     {
         var l1 = new Location(1, 0, CardinalPoint.North);
         var l2 = new Location(1, 0, CardinalPoint.East);
-        Assert.AreNotEqual(l1,l2);
+        Assert.AreNotEqual(l1, l2);
     }
-    
+
     [TestMethod]
     public void ShouldUpdateDirection()
     {

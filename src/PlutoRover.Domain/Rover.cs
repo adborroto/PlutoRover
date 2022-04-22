@@ -25,7 +25,7 @@ public class Rover
     public void MoveForward()
     {
         Check.NotNull(_location, new RoverHasNotLandedException());
-        
+
         var move = CalculateMoveBasedOnMyFacingDirection();
         var newPosition = move + Location.Position;
 
@@ -38,7 +38,7 @@ public class Rover
     public void MoveBackward()
     {
         Check.NotNull(_location, new RoverHasNotLandedException());
-        
+
         var move = CalculateMoveBasedOnMyFacingDirection();
         var newPosition = (move * -1) + Location.Position;
 
@@ -51,7 +51,7 @@ public class Rover
     public void TurnLeft()
     {
         Check.NotNull(_location, new RoverHasNotLandedException());
-        
+
         var newDirection = Location.Direction.SpinLeft();
         Location.UpdateDirection(newDirection);
     }
@@ -59,7 +59,7 @@ public class Rover
     public void TurnRight()
     {
         Check.NotNull(_location, new RoverHasNotLandedException());
-        
+
         var newDirection = Location.Direction.SpinRight();
         Location.UpdateDirection(newDirection);
     }

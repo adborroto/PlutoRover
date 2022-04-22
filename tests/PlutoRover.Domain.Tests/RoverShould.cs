@@ -9,7 +9,7 @@ public class RoverShould
     public void WhenLandShouldUpdateRoverLocation()
     {
         var rover = new Rover(Grid.Square(10));
-        rover.Land(1,1, CardinalPoint.North);
+        rover.Land(1, 1, CardinalPoint.North);
 
         Assert.AreEqual(new Location(1, 1, CardinalPoint.North), rover.Location);
     }
@@ -29,7 +29,7 @@ public class RoverShould
         rover.MoveBackward();
         Assert.AreEqual(new Location(1, 0, CardinalPoint.North), rover.Location);
     }
-    
+
     [TestMethod]
     public void ShouldMoveTurnRight()
     {
@@ -37,7 +37,7 @@ public class RoverShould
         rover.TurnRight();
         Assert.AreEqual(new Location(1, 1, CardinalPoint.East), rover.Location);
     }
-    
+
     [TestMethod]
     public void ShouldMoveTurnLeft()
     {
@@ -45,7 +45,7 @@ public class RoverShould
         rover.TurnLeft();
         Assert.AreEqual(new Location(1, 1, CardinalPoint.West), rover.Location);
     }
-    
+
     [TestMethod]
     [ExpectedException(typeof(RoverHasNotLandedException))]
     public void WhenRoverHasNotLandedShouldThrowAnException()
@@ -53,7 +53,7 @@ public class RoverShould
         var rover = new Rover(Grid.Square(10));
         rover.MoveBackward();
     }
-    
+
     private static Rover GivenALandedRoverFacingNorth()
     {
         var rover = new Rover(Grid.Square(10));
