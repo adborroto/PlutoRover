@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoRover.Domain", "src\PlutoRover.Domain\PlutoRover.Domain.csproj", "{A6082692-A6FD-45A1-B307-1000C515CE69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3E7471DA-28BB-43B2-AB24-A64DFFDB2BE4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{68AE1A92-D04E-4B16-B700-62A7F662B421}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoRover.Domain.Tests", "tests\PlutoRover.Domain.Tests\PlutoRover.Domain.Tests.csproj", "{6A2D3186-3A09-4449-82A6-9336555F4F15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoRover.Services", "src\PlutoRover.Services\PlutoRover.Services.csproj", "{F7B986B9-1199-4C13-8BE9-83A04AEC7694}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoRover.Services.Tests", "tests\PlutoRover.Services.Tests\PlutoRover.Services.Tests.csproj", "{7DD68580-E48C-4659-95F4-15764180A647}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoRover.Domain.Core", "src\PlutoRover.Domain.Core\PlutoRover.Domain.Core.csproj", "{A657E64F-6483-4F1B-9C56-ACF162669487}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6082692-A6FD-45A1-B307-1000C515CE69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6082692-A6FD-45A1-B307-1000C515CE69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6082692-A6FD-45A1-B307-1000C515CE69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6082692-A6FD-45A1-B307-1000C515CE69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A2D3186-3A09-4449-82A6-9336555F4F15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A2D3186-3A09-4449-82A6-9336555F4F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A2D3186-3A09-4449-82A6-9336555F4F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A2D3186-3A09-4449-82A6-9336555F4F15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7B986B9-1199-4C13-8BE9-83A04AEC7694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7B986B9-1199-4C13-8BE9-83A04AEC7694}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7B986B9-1199-4C13-8BE9-83A04AEC7694}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7B986B9-1199-4C13-8BE9-83A04AEC7694}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DD68580-E48C-4659-95F4-15764180A647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD68580-E48C-4659-95F4-15764180A647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD68580-E48C-4659-95F4-15764180A647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD68580-E48C-4659-95F4-15764180A647}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A657E64F-6483-4F1B-9C56-ACF162669487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A657E64F-6483-4F1B-9C56-ACF162669487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A657E64F-6483-4F1B-9C56-ACF162669487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A657E64F-6483-4F1B-9C56-ACF162669487}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A6082692-A6FD-45A1-B307-1000C515CE69} = {3E7471DA-28BB-43B2-AB24-A64DFFDB2BE4}
+		{6A2D3186-3A09-4449-82A6-9336555F4F15} = {68AE1A92-D04E-4B16-B700-62A7F662B421}
+		{F7B986B9-1199-4C13-8BE9-83A04AEC7694} = {3E7471DA-28BB-43B2-AB24-A64DFFDB2BE4}
+		{7DD68580-E48C-4659-95F4-15764180A647} = {68AE1A92-D04E-4B16-B700-62A7F662B421}
+		{A657E64F-6483-4F1B-9C56-ACF162669487} = {3E7471DA-28BB-43B2-AB24-A64DFFDB2BE4}
+	EndGlobalSection
+EndGlobal
