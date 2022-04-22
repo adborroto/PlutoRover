@@ -9,6 +9,7 @@ public class Location
     }
 
     public Position Position { get; private set; }
+   
     public Direction Direction { get; private set; }
 
     public void UpdatePosition(Position newPosition)

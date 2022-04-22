@@ -1,18 +1,22 @@
-﻿namespace PlutoRover.Domain;
+﻿using PlutoRover.Domain.Core;
+
+namespace PlutoRover.Domain;
 
 public class Grid
 {
-    public int Width { get; }
-    public int Height { get; }
-
     private Grid(int w, int h)
     {
         Width = w;
         Height = h;
     }
 
+    public int Width { get; }
+    
+    public int Height { get; }
+    
     public static Grid Square(int size)
     {
+        Check.IsTrue(size > 0, new ArgumentException("size has to be greater than 0", nameof(size)));
         return new Grid(size, size);
     }
 

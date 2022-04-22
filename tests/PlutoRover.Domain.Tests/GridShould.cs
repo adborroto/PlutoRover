@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace PlutoRover.Domain.Tests;
 
@@ -12,6 +13,14 @@ public class GridShould
         var grid = Grid.Square(size);
 
         Assert.IsTrue(grid.Height == grid.Width && grid.Width == size);
+    }
+    
+    [TestMethod]
+    [ExpectedException(typeof(ArgumentException))]
+    public void InvalidSizeShouldThrowAnException()
+    {
+        const int invalidSize = -1;
+        Grid.Square(invalidSize);
     }
 
     [DataTestMethod]

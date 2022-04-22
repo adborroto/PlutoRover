@@ -13,9 +13,12 @@ public class Rover
     public Rover(Grid grid)
     {
         _grid = grid;
+        _location = null;
     }
 
     public Location Location => _location;
+
+    public bool HasLanded => _location != null;
 
     public void Land(int x, int y, CardinalPoint facing)
     {
@@ -37,7 +40,7 @@ public class Rover
 
     public void MoveBackward()
     {
-        Check.NotNull(_location, new RoverHasNotLandedException());
+        Check.IsTrue(HasLanded, new RoverHasNotLandedException());
 
         var move = CalculateMoveBasedOnMyFacingDirection();
         var newPosition = (move * -1) + Location.Position;
@@ -50,7 +53,7 @@ public class Rover
 
     public void TurnLeft()
     {
-        Check.NotNull(_location, new RoverHasNotLandedException());
+        Check.IsTrue(HasLanded, new RoverHasNotLandedException());
 
         var newDirection = Location.Direction.SpinLeft();
         Location.UpdateDirection(newDirection);
@@ -58,7 +61,8 @@ public class Rover
 
     public void TurnRight()
     {
-        Check.NotNull(_location, new RoverHasNotLandedException());
+        Check.IsTrue(HasLanded, new RoverHasNotLandedException());
+
 
         var newDirection = Location.Direction.SpinRight();
         Location.UpdateDirection(newDirection);
@@ -66,6 +70,6 @@ public class Rover
 
     private Position CalculateMoveBasedOnMyFacingDirection()
     {
-        return _moves[(int)Location.Direction.Facing];
+        return _moves[(int) Location.Direction.Facing];
     }
 }

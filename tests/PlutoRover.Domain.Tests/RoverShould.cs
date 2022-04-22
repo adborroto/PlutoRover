@@ -5,6 +5,7 @@ namespace PlutoRover.Domain.Tests;
 [TestClass]
 public class RoverShould
 {
+    
     [TestMethod]
     public void WhenLandShouldUpdateRoverLocation()
     {
@@ -52,6 +53,15 @@ public class RoverShould
     {
         var rover = new Rover(Grid.Square(10));
         rover.MoveBackward();
+    }
+    
+    [TestMethod]
+    public void WhenLandsShouldHasLandedTrue()
+    {
+        var rover = new Rover(Grid.Square(10));
+        rover.Land(1, 1, CardinalPoint.North);
+
+        Assert.IsTrue(rover.HasLanded);
     }
 
     private static Rover GivenALandedRoverFacingNorth()

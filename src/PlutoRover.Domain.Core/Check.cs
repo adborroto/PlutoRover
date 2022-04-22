@@ -7,4 +7,10 @@ public static class Check
         if (o == null)
             throw e;
     }
+
+    public static void IsTrue(bool condition, Exception e)
+    {
+        if (!condition)
+            throw e;
+    }
 }
